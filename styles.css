@@ -1,0 +1,329 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 60px; /* Adjust height as needed */
+    width: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    padding: 15px 30px;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.presale-btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.presale-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Menu Icon (Hamburger) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Home Banner */
+.home-banner {
+    text-align: center;
+    background-color: #111;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mascot-container {
+    width: 100%;
+    max-width: 600px; /* Adjust max width for better desktop view */
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mascot {
+    width: 100%;
+    height: auto;
+    max-height: 80vh; /* Ensures the image is fully visible */
+    object-fit: contain;
+}
+
+.home-banner h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.home-banner p {
+    font-size: 20px;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse; /* Ensures borders don't leave empty spaces */
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f39c12;
+    color: white;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+    /* Navigation Bar */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .presale-btn {
+        margin-top: 10px;
+        align-self: center;
+    }
+
+    /* Show the Menu Icon */
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Home Banner */
+    .home-banner h1 {
+        font-size: 28px;
+    }
+
+    .home-banner p {
+        font-size: 18px;
+    }
+
+    /* Table Styling */
+    table {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .download-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    pre {
+        font-size: 14px;
+    }
+}
+
+/* About Section */
+/* About Section */
+#about {
+    background-color: #f8f9fa; /* Light background for a clean look */
+    padding: 60px 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px; /* Container to center and limit the width */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #2d3e50; /* Darker color for the title */
+}
+
+.intro {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #555;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-item strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f39c12; /* Accent color */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.feature-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    #about h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Home Banner */
+    .home-banner h1 {
+        font-size: 24px;
+    }
+
+    .home-banner p {
+        font-size: 16px;
+    }
+
+    .mascot {
+        width: 120px;
+    }
+
+    /* Table Styling */
+    table {
+        font-size: 12px;
+    }
+
+    .download-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    pre {
+        font-size: 12px;
+    }
+}

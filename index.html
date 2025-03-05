@@ -1,215 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon - Solmut ($SLMT)</title>
-  <style>
-    /* General styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh; /* Use min-height instead of height */
-      margin: 0;
-      text-align: center;
-      overflow: hidden;
-      position: relative;
-      padding: 20px; /* Ensure some spacing on small screens */
-    }
-
-    /* Add background image and overlay using ::before */
-    body::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url(assets/background.png) center/cover no-repeat;
-      opacity: 0.5; /* 50% brightness */
-      z-index: -1;
-    }
-
-    .content {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 600px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1.5s forwards;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Fade-in animation for content */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: #ffcb00; /* Gold for SLMT theme */
-      margin: 0;
-      text-shadow: 2px 2px 5px rgba(255, 203, 0, 0.7);
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin: 15px 0;
-    }
-
-    .dog-image {
-      width: 200px;
-      height: auto;
-      margin: 20px 0;
-      opacity: 0;
-      animation: imageAnimation 1.5s ease-in-out 1s forwards;
-    }
-
-    /* Animation for dog image */
-    @keyframes imageAnimation {
-      from {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    /* Button styles */
-    .cta-buttons-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .cta-button {
-      background-color: #0088cc;
-      color: #fff;
-      padding: 12px 25px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      width: 100%;
-      max-width: 300px;
-    }
-
-    .cta-button.twitter {
-      background-color: #020202;
-    }
-
-    .cta-button:hover {
-      transform: scale(1.05);
-      background-color: #006db2;
-    }
-
-    .cta-button.twitter:hover {
-      background-color: #0b0b0b;
-    }
-
-    .cta-button img {
-      width: 20px;
-      height: 20px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .cta-button {
-        font-size: 1rem;
-        padding: 10px 20px;
-      }
-    }
-
-    @media (max-width: 400px) {
-      .cta-buttons-container {
-        gap: 10px;
-      }
-
-      .cta-button {
-        font-size: 0.9rem;
-        padding: 8px 18px;
-      }
-
-      .dog-image {
-        width: 150px;
-      }
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solmut ($SLMT)</title>
+     <!-- Base Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="menu-icon" id="menu-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </div>
+        <nav>
+            <!-- Menu Icon for small devices -->
+            
+            <div class="nav-left">
+                <a href="#">
+                    <img src="assets/solmut-transparent.png" alt="Solmut Logo" class="logo">
+                </a>
+            </div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="https://docs.google.com/document/d/1CAvu8lDS5Tu0HbqNWLAGs8MRLMt1gq-pwSM5oLh2aRI/edit?pli=1&tab=t.0" target="_blank">White Paper</a></li>
+            </ul>
+        </nav>
+        <button class="presale-btn">Presale</button>
+    </header>
 
-  <div class="content">
-    <h1>Solmut ($SLMT) is Launching Soon!</h1>
+    <!-- Home Section (Image Banner) -->
+    <section id="home" class="home-banner">
+        <div class="mascot-container">
+            <img src="assets/slmt_dog1.png" alt="Solmut Mascot" class="mascot">
+        </div>
+        <h1>Solmut ($SLMT) - The Meme Token Revolution</h1>
+        <p>Fast, Low-Cost, and Community-Driven on Solana</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Solmut ($SLMT)</h2>
+            <p class="intro">Solmut ($SLMT) is a revolutionary meme token built on the Solana blockchain, combining fast, low-cost transactions with the fun, community-driven spirit of meme culture. Our goal is to create a token that empowers users with staking rewards, an auto-burn mechanism, and a thriving community.</p>
     
-    <!-- Dog Image -->
-    <img src="assets/logo-transparent.png" alt="Solmut Dog Mascot" class="dog-image">
+            <p class="intro">As a Solana-powered token, Solmut stands out from other meme coins by offering high scalability and lightning-fast transaction speeds. With Solmut, users can participate in a fun, decentralized ecosystem while enjoying the benefits of a secure and innovative blockchain.</p>
     
-    <p>Get ready to swap Solana (SOL) for $SLMT tokens!</p>
-    <p>Launching soon, stay tuned for updates!</p>
+            <h2>Key Features</h3>
+            <div class="features">
+                
+                <div class="feature-item">
+                    <strong>Fast Transactions</strong>
+                    <p>Built on the Solana blockchain, Solmut ensures transactions are completed in seconds with near-zero fees, making it a highly efficient and cost-effective solution.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>Low Fees</strong>
+                    <p>Solmut leverages Solana’s ultra-low transaction fees, providing an unparalleled user experience while minimizing transaction costs.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>Community-Driven</strong>
+                    <p>Solmut is designed for the community. We reward token holders through staking rewards, engaging them in the growth and development of the ecosystem.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>Auto-Burn Mechanism</strong>
+                    <p>A portion of every transaction is burned, ensuring a deflationary supply that adds value over time.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>Staking Rewards</strong>
+                    <p>By staking $SLMT tokens, users can earn rewards, incentivizing long-term holding and strengthening the network.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>Solana-Themed Dog Mascot</strong>
+                    <p>Our fun, Solana-themed dog mascot embodies the playful spirit of Solmut, making it both a token of value and a symbol of community-driven innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Social Media Buttons -->
-    <div class="cta-buttons-container">
-      <!-- Telegram CTA Button -->
-      <a href="https://t.me/solmutOfficial" target="_blank">
-        <button class="cta-button">
-          <span>Join us on Telegram</span>
-        </button>
-      </a>
+    <!-- Tokenomics Section -->
+    <section id="tokenomics">
+        <h2>Tokenomics</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Percentage</th>
+                <th>Amount (Tokens)</th>
+                <th>Locked/Unlocked</th>
+            </tr>
+            <tr>
+                <td>Presale</td>
+                <td>20%</td>
+                <td>20,000,000</td>
+                <td>Unlocked</td>
+            </tr>
+            <tr>
+                <td>Liquidity Pool</td>
+                <td>10%</td>
+                <td>10,000,000</td>
+                <td>Unlocked</td>
+            </tr>
+            <tr>
+                <td>Marketing & Partnerships</td>
+                <td>5%</td>
+                <td>5,000,000</td>
+                <td>Unlocked</td>
+            </tr>
+            <tr>
+                <td>Staking/Rewards</td>
+                <td>5%</td>
+                <td>5,000,000</td>
+                <td>Unlocked</td>
+            </tr>
+            <tr>
+                <td>Team/Development</td>
+                <td>20%</td>
+                <td>20,000,000</td>
+                <td>Locked</td>
+            </tr>
+            <tr>
+                <td>Reserve</td>
+                <td>25%</td>
+                <td>25,000,000</td>
+                <td>Locked</td>
+            </tr>
+            <tr>
+                <td>Staking Reserve</td>
+                <td>15%</td>
+                <td>15,000,000</td>
+                <td>Locked</td>
+            </tr>
+        </table>
+    </section>
 
-      <!-- X (Twitter) CTA Button -->
-      <a href="https://twitter.com/solmutOfficial" target="_blank">
-        <button class="cta-button twitter">
-          <span>Follow us on X</span>
-        </button>
-      </a>
-    </div>
+    <footer>
+        <p>&copy; 2025 Solmut. All Rights Reserved.</p>
+    </footer>
 
-  </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
