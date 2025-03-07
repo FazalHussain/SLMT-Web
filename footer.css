@@ -1,0 +1,100 @@
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+/* Social Icon Styling (Better Visibility) */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon i {
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+/* Updated Twitter and Telegram Colors */
+.twitter {
+    color: #fff;
+    background-color: #1DA1F2;
+}
+
+.telegram {
+    color: #fff;
+    background-color: #0088cc;
+}
+
+/* Hover Effects */
+.icon:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.twitter:hover {
+    background-color: #0d8cd7;
+}
+
+.telegram:hover {
+    background-color: #0077b5;
+}
+
+/* Whitepaper Link Styling */
+.whitepaper-link {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-flex;
+    align-items: center;
+    animation: pulse 1.5s infinite;
+}
+
+.whitepaper-link i {
+    font-size: 28px;
+    margin-right: 8px;
+    color: #ffdd57;
+    animation: bounce 1s infinite alternate;
+}
+
+.whitepaper-link:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}

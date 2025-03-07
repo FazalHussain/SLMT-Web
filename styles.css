@@ -124,7 +124,7 @@ h2 {
 }
 
 table {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     border-collapse: collapse; /* Ensures borders don't leave empty spaces */
     overflow-x: auto;
@@ -151,14 +151,6 @@ pre {
     border-radius: 5px;
     font-size: 16px;
     font-family: monospace;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
 }
 
 /* Media Queries for Mobile */
@@ -221,7 +213,7 @@ footer {
 /* About Section */
 #about {
     background-color: #f8f9fa; /* Light background for a clean look */
-    padding: 60px 20px;
+    padding: 40px 20px;
     color: #333;
 }
 
@@ -283,6 +275,98 @@ footer {
     color: #555;
 }
 
+.summary {
+    background-color: #f8f9fa; 
+}
+
+/* Token Summary */
+.token-distribution {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background: #f8f9fa; 
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Token Boxes */
+.token-box {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Locked Tokens - Light Red */
+.locked {
+    background: #ffe6e6; /* Soft red */
+    color: #cc0000; /* Dark red */
+    border: 2px solid #ff9999;
+}
+
+/* Unlocked Tokens - Light Green */
+.unlocked {
+    background: #e6ffe6; /* Soft green */
+    color: #008000; /* Dark green */
+    border: 2px solid #99ff99;
+}
+
+/* Vesting Box */
+.vesting-box {
+    background-color: #ffffff; /* White background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px; /* Space from previous sections */
+    width: 70%; /* Maintain 70% width */
+    max-width: 800px; /* Prevent from becoming too wide */
+    margin: 30px auto; /* Centering it horizontally */
+}
+
+.vesting-box h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #111; /* Bright color for heading */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Text Styling */
+.vesting-box p {
+    font-size: 16px;
+    line-height: 1.6; /* Line spacing for better readability */
+    font-weight: 500;
+    margin: 12px 0;
+}
+
+/* Add strong text color */
+.vesting-box p strong {
+    color: #007bff; /* Blue color for important text */
+}
+
+/* FAQ Section */
+.faq-item {
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.faq-item h3 {
+    color: #ffcc00;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.faq-item p {
+    font-size: 14px;
+    color: #ddd;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .features {
@@ -292,6 +376,19 @@ footer {
     .intro {
         font-size: 16px;
         margin-bottom: 20px;
+    }
+
+    .token-distribution {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .vesting-box p {
+        font-size: 16px;
+        margin: 0 auto;
+        width: 80%;
+        position: relative;
     }
 
     #about h2 {
@@ -310,12 +407,16 @@ footer {
     }
 
     .mascot {
-        width: 120px;
+        width: 80%;
     }
 
     /* Table Styling */
     table {
         font-size: 12px;
+    }
+
+    .vesting-box ul li {
+        font-size: 13px;
     }
 
     .download-btn {
